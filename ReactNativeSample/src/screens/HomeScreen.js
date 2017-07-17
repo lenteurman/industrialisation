@@ -11,6 +11,8 @@ import Info from '../components/Info';
 import { GREETINGS_SCENE_NAME } from '../screens/GreetingsScreen';
 import { JSX_SCENE_NAME } from '../screens/JsxScreen';
 import { STATE_SCENE_NAME } from '../screens/StateScreen';
+import { ANIMATION_SCENE_NAME } from '../screens/AnimationScreen';
+
 
 export const HOME_SCENE_NAME = 'HOME_SCENE';
 
@@ -34,6 +36,7 @@ export default class HomeScreen extends Component {
     this.navigateToGreetings = this.navigateToGreetings.bind(this);
     this.navigateToJsx = this.navigateToJsx.bind(this);
     this.navigateToState = this.navigateToState.bind(this);
+    this.navigateToAnimation = this.navigateToAnimation.bind(this);
   }
 
   navigateToGreetings() {
@@ -46,6 +49,10 @@ export default class HomeScreen extends Component {
 
   navigateToState() {
     this.navigate(STATE_SCENE_NAME);
+  }
+
+  navigateToAnimation() {
+    this.navigate(ANIMATION_SCENE_NAME);
   }
 
   render() {
@@ -69,6 +76,12 @@ export default class HomeScreen extends Component {
           <Button
             onPress={this.navigateToState}
             title="State"
+          />
+        </View>
+        <View style={styles.margin}>
+          <Button
+            onPress={this.navigateToAnimation}
+            title="Animation"
           />
         </View>
       </ScrollView>
